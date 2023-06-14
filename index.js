@@ -72,7 +72,7 @@ function executeCommand(command, args) {
   const prefix = "$";
   bot.on('login', () => {
     console.log('\x1b[31m%s\x1b[0m', 'CliBot is running.');
-    console.log('\x1b[31m%s\x1b[0m', `Host: ${serverHost}, Auth: ${process.env.AUTH}, Username: ${bot.username}`);
+    console.log('\x1b[31m%s\x1b[0m', `Host: ${serverHost}, Auth: ${auth}, Username: ${bot.username}`);
     bot.chat(`/broadcastraw &a&lCliBot is running. Prefix: ${prefix}`);
   })
 
