@@ -3,7 +3,7 @@ Bot programmed to use Terminal to execute code
 CLIBot also accepts arguments
 <br>
 Command API:
-  // CLIBOT - REGISTER COMMANDS HERE
+  // CLIBOT - REGISTER COMMANDS HERE<br>
   commands.push({ name: 'say', func: say });
 <br>
 <br>
