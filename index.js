@@ -80,28 +80,10 @@ function executeCommand(command, args) {
     bot.chat(`/vanish`);
   })
 
-  let prefixed = false;
-  let commanded = false;
-  let intervalId;
   bot.on('chat', (username, message) => {
       if (username === bot.username) return;
-      else if (prefixed === false) {
-          bot.chat("/prefix &a&l[CLI]");
-          prefixed = true;
-      } else if (commanded === false) {
-          bot.chat("/c on");
-          commanded = true;
-      } else if (chattroll === true) {
-          bot.chat(`[${username}] ${message}`);
-      } else if (message.includes(`/deop ${bot.username}`)) {
+      else if (message.includes(`/deop ${bot.username}`)) {
         bot.chat(`/op @s[type=player]`);
-      } else if (message.includes(`$cmds`)) {
-        bot.chat(`&c&lCLIBOT - Commands > `);
-        bot.chat(`&c&lCLIBOT - spam, killall, players, randomname, clearchat, skydiveall, unspam`);
-      } else if (message.includes(`$spam`)) {
-        intervalId = setInterval(spam, 335);
-      } else if (message.includes(`$unspam`)) {
-        clearInterval(intervalId);
       }
   });  
 
