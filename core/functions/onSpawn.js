@@ -1,7 +1,6 @@
 const readline = require('readline');
 const executeCommand = require("./executeCommand")
 
-
 function spawn(bot, formattedCommands, commands) {
     bot.once('spawn', () => {
         console.log('\x1b[1m\x1b[34m%s\x1b[0m', "Commands: " + formattedCommands);
